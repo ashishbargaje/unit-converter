@@ -1,0 +1,134 @@
+body {
+    width: 1345px;
+    height: 979px;
+    background-color: #1c1c1c;
+    display: flex;
+    font-family: "Inter", sans-serif;
+}
+
+#light-mode {
+    width: 550px;
+    height: 729px;
+    margin-top: 126px;
+    margin-left: 76px;
+    background-color: #f4f4f4;
+    border: 10px solid #ffffff;
+    border-radius: 8px;
+}
+
+#dark-mode {
+    width: 550px;
+    height: 729px;
+    margin-top: 126px;
+    margin-left: 70px;
+    background-color: #1f2937;
+    border: 10px solid #273549;
+    border-radius: 8px;
+}
+
+.top-section {
+    width: 550px;
+    height: 285px;
+    background: #6943ff;
+    color: #ffffff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#light-mode .bottom-section {
+    width: 500px;
+    height: 108.57px;
+    background-color: #ffffff;
+}
+
+#dark-mode .bottom-section {
+    width: 500px;
+    height: 108.57px;
+    background-color: #273549;
+}
+
+#length-container {
+    margin-top: 36px;
+    margin-left: 25px;
+}
+
+#volume-container {
+    margin-top: 23.43px;
+    margin-left: 25px;
+}
+
+#mass-container {
+    margin-top: 23.43px;
+    margin-bottom: 35.43px;
+    margin-left: 25px;
+}
+
+div input {
+    width: 117px;
+    height: 83px;
+    border: 2px solid #B295FF;
+    border-radius: 2px;
+    background-color: #6943FF;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffffff;
+}
+
+div button {
+    width: 117px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 9px 27.5px;
+    font-weight: 500;
+    font-size: large;
+    color: #3D3D3D;
+}
+
+#light-mode div h2 {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #5A537B;
+    padding: 31px 77px 9px 77px;
+}
+
+#light-mode div h3 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #353535;
+}
+
+#dark-mode div h2 {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #CCC1FF;
+    padding: 31px 77px 9px 77px;
+}
+
+#dark-mode div h3 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFFFFF;
+}
