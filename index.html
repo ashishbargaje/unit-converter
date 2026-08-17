@@ -3,8 +3,6 @@
 
 <head>
     <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -12,48 +10,27 @@
 </head>
 
 <body>
-    <div id="light-mode">
+    <button id="theme-toggle-btn">Click to change theme</button>
+    <div id="container" class="container">
         <div class="top-section">
             <h1>Metric/Imperial Unit Conversion</h1>
-            <input id="l-input-el" placeholder="0">
+            <input id="input-el" placeholder="0">
             <div>
-                <button id="l-convert-btn" class="convert-btn">Convert</button>
-                <button id="l-clear-btn" class="clear-btn">Clear</button>
-            </div>            
+                <button id="convert-btn" class="convert-btn">Convert</button>
+                <button id="clear-btn" class="clear-btn">Clear</button>
+            </div>
         </div>
-        <div id="length-container" class="bottom-section">
+        <div id="length-container" class="bottom-section-container">
             <h2>Length (Meter/Feet)</h2>
-            <h3 id="l-length-converter"></h3>
+            <h3 id="length-converter"></h3>
         </div>
-        <div id="volume-container" class="bottom-section">
+        <div id="volume-container" class="bottom-section-container">
             <h2>Volume (Liters/Gallons)</h2>
-            <h3 id="l-volume-converter"></h3>
+            <h3 id="volume-converter"></h3>
         </div>
-        <div id="mass-container" class="bottom-section">
+        <div id="mass-container" class="bottom-section-container">
             <h2>Mass (Kilograms/Pounds)</h2>
-            <h3 id="l-mass-converter"></h3>
-        </div>
-    </div>
-    <div id="dark-mode">
-        <div class="top-section">
-            <h1>Metric/Imperial Unit Conversion</h1>
-            <input id="d-input-el" placeholder="0">
-            <div>
-                <button id="d-convert-btn" class="convert-btn">Convert</button>
-                <button id="d-clear-btn" class="clear-btn">Clear</button>
-            </div>  
-        </div>
-        <div id="length-container" class="bottom-section">
-            <h2>Length (Meter/Feet)</h2>
-            <h3 id="d-length-converter"></h3>
-        </div>
-        <div id="volume-container" class="bottom-section">
-            <h2>Volume (Liters/Gallons)</h2>
-            <h3 id="d-volume-converter"></h3>
-        </div>
-        <div id="mass-container" class="bottom-section">
-            <h2>Mass (Kilograms/Pounds)</h2>
-            <h3 id="d-mass-converter"></h3>
+            <h3 id="mass-converter"></h3>
         </div>
     </div>
     <script src="index.js"></script>

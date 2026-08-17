@@ -1,12 +1,27 @@
 body {
     width: 1345px;
     height: 979px;
-    background-color: #1c1c1c;
-    display: flex;
+    background-color: #1c1c1c;    
     font-family: "Inter", sans-serif;
+    display: flex;
 }
 
-#light-mode {
+#theme-toggle-btn {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #B295FF;
+    border-radius: 30px;
+    background-color: #6943FF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 126px;
+    margin-left: 76px;
+}
+
+.container {
+    flex-direction: column;
     width: 550px;
     height: 729px;
     margin-top: 126px;
@@ -16,14 +31,9 @@ body {
     border-radius: 8px;
 }
 
-#dark-mode {
-    width: 550px;
-    height: 729px;
-    margin-top: 126px;
-    margin-left: 70px;
+.dark-mode-container {
     background-color: #1f2937;
     border: 10px solid #273549;
-    border-radius: 8px;
 }
 
 .top-section {
@@ -37,15 +47,13 @@ body {
     align-items: center;
 }
 
-#light-mode .bottom-section {
+.bottom-section-container {
     width: 500px;
     height: 108.57px;
     background-color: #ffffff;
 }
 
-#dark-mode .bottom-section {
-    width: 500px;
-    height: 108.57px;
+.dark-mode-bottom-section {
     background-color: #273549;
 }
 
@@ -103,7 +111,7 @@ div .clear-btn {
     color: #ffffff;
 }
 
-#light-mode div h2 {
+h2 {
     font-family: Inter;
     font-weight: 600;
     font-style: Semi Bold;
@@ -115,7 +123,11 @@ div .clear-btn {
     padding: 31px 77px 9px 77px;
 }
 
-#light-mode div h3 {
+.dark-mode-h2 {
+    color: #CCC1FF;
+}
+
+h3 {
     font-family: Inter;
     font-weight: 400;
     font-size: 14px;
@@ -125,24 +137,6 @@ div .clear-btn {
     color: #353535;
 }
 
-#dark-mode div h2 {
-    font-family: Inter;
-    font-weight: 600;
-    font-style: Semi Bold;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #CCC1FF;
-    padding: 31px 77px 9px 77px;
-}
-
-#dark-mode div h3 {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0%;
-    text-align: center;
+.dark-mode-h3 {
     color: #FFFFFF;
 }
