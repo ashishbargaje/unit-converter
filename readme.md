@@ -21,7 +21,7 @@ A simple unit converter that converts between metric and imperial units for leng
 - Convert meters ↔ feet
 - Convert liters ↔ gallons
 - Convert kilograms ↔ pounds
-- Light and Dark layouts
+- Light and Dark layouts switch button
 - Remembers the last entered value using Local Storage
 - Automatically restores the last value after page refresh
 - Automatically recalculates conversions after page refresh
