@@ -8,58 +8,43 @@
 // Although localStorage stores strings directly, this pattern is required
 // when storing objects or arrays.
 
-const lightInputEl = document.getElementById("l-input-el")
-const lightConvertBtn = document.getElementById("l-convert-btn")
-const lightLengthConverter = document.getElementById("l-length-converter")
-const lightVolumeConverter = document.getElementById("l-volume-converter")
-const lightMassConverter = document.getElementById("l-mass-converter")
-const lightClearBtn = document.getElementById("l-clear-btn") 
+const inputEl = document.getElementById("input-el")
+const convertBtn = document.getElementById("convert-btn")
+const lengthConverter = document.getElementById("length-converter")
+const volumeConverter = document.getElementById("volume-converter")
+const massConverter = document.getElementById("mass-converter")
+const clearBtn = document.getElementById("clear-btn") 
+const themeToggleBtn = document.getElementById("theme-toggle-btn")
+const container = document.getElementById("container")
+const bottomSectionContainers = document.getElementsByClassName("bottom-section-container")
 
-lightInputEl.value = JSON.parse(localStorage.getItem("lmodeLastInputValue"))
-lightLengthConverter.innerHTML = `${Number(lightInputEl.value)} meters = ${getLengthInFeet(Number(lightInputEl.value))} feet | ${Number(lightInputEl.value)} feet = ${getLengthInMeter(Number(lightInputEl.value))} meters`
-lightVolumeConverter.innerHTML = `${Number(lightInputEl.value)} liters = ${getVolumeInGallons(Number(lightInputEl.value))} gallons | ${Number(lightInputEl.value)} gallons = ${getVolumeInLiters(Number(lightInputEl.value))} liters`
-lightMassConverter.innerHTML = `${Number(lightInputEl.value)} kilos = ${getMassInPounds(Number(lightInputEl.value))} pounds | ${Number(lightInputEl.value)} pounds = ${getMassInKilograms(Number(lightInputEl.value))} kilos`
+inputEl.value = JSON.parse(localStorage.getItem("lmodeLastInputValue"))
+lengthConverter.innerHTML = `${Number(inputEl.value)} meters = ${getLengthInFeet(Number(inputEl.value))} feet | ${Number(inputEl.value)} feet = ${getLengthInMeter(Number(inputEl.value))} meters`
+volumeConverter.innerHTML = `${Number(inputEl.value)} liters = ${getVolumeInGallons(Number(inputEl.value))} gallons | ${Number(inputEl.value)} gallons = ${getVolumeInLiters(Number(inputEl.value))} liters`
+massConverter.innerHTML = `${Number(inputEl.value)} kilos = ${getMassInPounds(Number(inputEl.value))} pounds | ${Number(inputEl.value)} pounds = ${getMassInKilograms(Number(inputEl.value))} kilos`
     
-lightConvertBtn.addEventListener("click", function () {
-    lightLengthConverter.innerHTML = `${Number(lightInputEl.value)} meters = ${getLengthInFeet(Number(lightInputEl.value))} feet | ${Number(lightInputEl.value)} feet = ${getLengthInMeter(Number(lightInputEl.value))} meters`
-    lightVolumeConverter.innerHTML = `${Number(lightInputEl.value)} liters = ${getVolumeInGallons(Number(lightInputEl.value))} gallons | ${Number(lightInputEl.value)} gallons = ${getVolumeInLiters(Number(lightInputEl.value))} liters`
-    lightMassConverter.innerHTML = `${Number(lightInputEl.value)} kilos = ${getMassInPounds(Number(lightInputEl.value))} pounds | ${Number(lightInputEl.value)} pounds = ${getMassInKilograms(Number(lightInputEl.value))} kilos`
-    localStorage.setItem("lmodeLastInputValue", JSON.stringify(lightInputEl.value))
+convertBtn.addEventListener("click", function () {
+    lengthConverter.innerHTML = `${Number(inputEl.value)} meters = ${getLengthInFeet(Number(inputEl.value))} feet | ${Number(inputEl.value)} feet = ${getLengthInMeter(Number(inputEl.value))} meters`
+    volumeConverter.innerHTML = `${Number(inputEl.value)} liters = ${getVolumeInGallons(Number(inputEl.value))} gallons | ${Number(inputEl.value)} gallons = ${getVolumeInLiters(Number(inputEl.value))} liters`
+    massConverter.innerHTML = `${Number(inputEl.value)} kilos = ${getMassInPounds(Number(inputEl.value))} pounds | ${Number(inputEl.value)} pounds = ${getMassInKilograms(Number(inputEl.value))} kilos`
+    localStorage.setItem("lmodeLastInputValue", JSON.stringify(inputEl.value))
 })
 
-lightClearBtn.addEventListener("dblclick", function(){
+clearBtn.addEventListener("dblclick", function(){
     localStorage.clear()
-    lightInputEl.value = ""
-    lightLengthConverter.innerHTML = `${Number(lightInputEl.value)} meters = ${getLengthInFeet(Number(lightInputEl.value))} feet | ${Number(lightInputEl.value)} feet = ${getLengthInMeter(Number(lightInputEl.value))} meters`
-    lightVolumeConverter.innerHTML = `${Number(lightInputEl.value)} liters = ${getVolumeInGallons(Number(lightInputEl.value))} gallons | ${Number(lightInputEl.value)} gallons = ${getVolumeInLiters(Number(lightInputEl.value))} liters`
-    lightMassConverter.innerHTML = `${Number(lightInputEl.value)} kilos = ${getMassInPounds(Number(lightInputEl.value))} pounds | ${Number(lightInputEl.value)} pounds = ${getMassInKilograms(Number(lightInputEl.value))} kilos`
+    inputEl.value = ""
+    lengthConverter.innerHTML = `${Number(inputEl.value)} meters = ${getLengthInFeet(Number(inputEl.value))} feet | ${Number(inputEl.value)} feet = ${getLengthInMeter(Number(inputEl.value))} meters`
+    volumeConverter.innerHTML = `${Number(inputEl.value)} liters = ${getVolumeInGallons(Number(inputEl.value))} gallons | ${Number(inputEl.value)} gallons = ${getVolumeInLiters(Number(inputEl.value))} liters`
+    massConverter.innerHTML = `${Number(inputEl.value)} kilos = ${getMassInPounds(Number(inputEl.value))} pounds | ${Number(inputEl.value)} pounds = ${getMassInKilograms(Number(inputEl.value))} kilos`
 })
 
-const darkInputEl = document.getElementById("d-input-el")
-const darkConvertBtn = document.getElementById("d-convert-btn")
-const darkLengthConverter = document.getElementById("d-length-converter")
-const darkVolumeConverter = document.getElementById("d-volume-converter")
-const darkMassConverter = document.getElementById("d-mass-converter")
-const darkClearBtn = document.getElementById("d-clear-btn")
-
-darkInputEl.value = JSON.parse(localStorage.getItem("dmodeLastInputValue"))
-darkLengthConverter.innerHTML = `${Number(darkInputEl.value)} meters = ${getLengthInFeet(Number(darkInputEl.value))} feet | ${Number(darkInputEl.value)} feet = ${getLengthInMeter(Number(darkInputEl.value))} meters`
-darkVolumeConverter.innerHTML = `${Number(darkInputEl.value)} liters = ${getVolumeInGallons(Number(darkInputEl.value))} gallons | ${Number(darkInputEl.value)} gallons = ${getVolumeInLiters(Number(darkInputEl.value))} liters`
-darkMassConverter.innerHTML = `${Number(darkInputEl.value)} kilos = ${getMassInPounds(Number(darkInputEl.value))} pounds | ${Number(darkInputEl.value)} pounds = ${getMassInKilograms(Number(darkInputEl.value))} kilos`
-
-darkConvertBtn.addEventListener("click", function () {
-    darkLengthConverter.innerHTML = `${Number(darkInputEl.value)} meters = ${getLengthInFeet(Number(darkInputEl.value))} feet | ${Number(darkInputEl.value)} feet = ${getLengthInMeter(Number(darkInputEl.value))} meters`
-    darkVolumeConverter.innerHTML = `${Number(darkInputEl.value)} liters = ${getVolumeInGallons(Number(darkInputEl.value))} gallons | ${Number(darkInputEl.value)} gallons = ${getVolumeInLiters(Number(darkInputEl.value))} liters`
-    darkMassConverter.innerHTML = `${Number(darkInputEl.value)} kilos = ${getMassInPounds(Number(darkInputEl.value))} pounds | ${Number(darkInputEl.value)} pounds = ${getMassInKilograms(Number(darkInputEl.value))} kilos`
-    localStorage.setItem("dmodeLastInputValue", JSON.stringify(darkInputEl.value))
-})
-
-darkClearBtn.addEventListener("dblclick", function(){
-    localStorage.clear()
-    darkInputEl.value = ""
-    darkLengthConverter.innerHTML = `${Number(darkInputEl.value)} meters = ${getLengthInFeet(Number(darkInputEl.value))} feet | ${Number(darkInputEl.value)} feet = ${getLengthInMeter(Number(darkInputEl.value))} meters`
-    darkVolumeConverter.innerHTML = `${Number(darkInputEl.value)} liters = ${getVolumeInGallons(Number(darkInputEl.value))} gallons | ${Number(darkInputEl.value)} gallons = ${getVolumeInLiters(Number(darkInputEl.value))} liters`
-    darkMassConverter.innerHTML = `${Number(darkInputEl.value)} kilos = ${getMassInPounds(Number(darkInputEl.value))} pounds | ${Number(darkInputEl.value)} pounds = ${getMassInKilograms(Number(darkInputEl.value))} kilos`
+themeToggleBtn.addEventListener("click", function(){
+    container.classList.toggle("dark-mode-container")
+    for (let i=0; i<bottomSectionContainers.length; i++) {
+        bottomSectionContainers[i].classList.toggle("dark-mode-bottom-section")
+        document.getElementsByTagName("h2")[i].classList.toggle("dark-mode-h2")
+        document.getElementsByTagName("h3")[i].classList.toggle("dark-mode-h3")
+    }    
 })
 
 function getLengthInFeet(num) {
